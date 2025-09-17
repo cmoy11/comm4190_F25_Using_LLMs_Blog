@@ -1,8 +1,8 @@
 ---
 title: About
-image: profile.jpg
+image: square_headshot.jpg
 about:
   template: jolla
 ---
 
-About this blog
+Hi! I'm Cameron Moy! I am a Ph.D. student at the University of Pennsylvania Annenberg School for Communication. I study digital platforms through the frameworks of critical data studies, algorithmic & design justice, and racial & platform capitalism. My mixed methods work interrogates platformized racial hierarchies and power structures to imagine and realize a more just and equitable digital future at the intersection of Communication and Human-Computer Interaction research.
