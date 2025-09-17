@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-90cf6d6b24c6b8608be7cafa9187f484.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b53db9748ad02c9f2fe49dd1786c937a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,7 +114,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -139,6 +140,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
@@ -152,16 +155,6 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
-</i> 
-<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -192,7 +185,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aGVsbG8=">hello <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVzdGluZw==">testing <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="YmxvZ3M=">blogs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGVndWdnaW5n">degugging <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z3VpZGVz">guides <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGVsbG8=">hello <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVzdGluZw==">testing <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -206,7 +199,41 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bGFiJTJDdGVzdGluZyUyQ2hlbGxv" data-listing-date-sort="1755475200000" data-listing-file-modified-sort="1755546070793" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="ZGVndWdnaW5nJTJDYmxvZ3MlMkNndWlkZXM=" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1758142276512" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="365">
+<div class="thumbnail"><a href="./posts/002_blogdemo/blog.html" class="no-external">
+
+<p class="card-img-top"><img src="posts/002_blogdemo/output.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/002_blogdemo/blog.html" class="no-external">Common Blogging Mistakes</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGVndWdnaW5n'); return false;">degugging</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ3M='); return false;">blogs</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z3VpZGVz'); return false;">guides</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/002_blogdemo/blog.html" class="no-external">
+Here’s a short sci-fi story for you
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/002_blogdemo/blog.html" class="no-external">
+<div class="listing-date">
+Sep 17, 2025
+</div>
+<div class="listing-author">
+Cameron Moy
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bGFiJTJDdGVzdGluZyUyQ2hlbGxv" data-listing-date-sort="1755475200000" data-listing-file-modified-sort="1758142276512" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
 <div class="thumbnail"><a href="./posts/001_myfirstpost/myfirstpost.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/001_myfirstpost/IMG_0482.jpeg"  class="thumbnail-image card-img"/></p>
@@ -229,9 +256,9 @@ window.Quarto = {
 
 
 <div id="0cc8fccb-5c4c-4f9f-a874-63f2ae75adeb" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="bu">print</span>(<span class="st">"hello world!"</span>)</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="bu">print</span>(<span class="st">"hello my world!"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>hello world!</code></pre>
+<pre><code>hello my world!</code></pre>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -256,7 +283,41 @@ Cameron Moy
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1755546070783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
+<div class="quarto-post image-right" data-index="2" data-categories="bGFiJTJDdGVzdGluZyUyQ2hlbGxv" data-listing-date-sort="1755475200000" data-listing-file-modified-sort="1758142276512" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail"><a href="./posts/001_myfirstpost/Untitled.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/001_myfirstpost/Untitled.html" class="no-external">My first post</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGVzdGluZw=='); return false;">testing</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aGVsbG8='); return false;">hello</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/001_myfirstpost/Untitled.html" class="no-external">
+
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/001_myfirstpost/Untitled.html" class="no-external">
+<div class="listing-date">
+Aug 18, 2025
+</div>
+<div class="listing-author">
+Cameron Moy
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1758142276503" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
 <div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
@@ -344,13 +405,14 @@ An LLM User
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
